@@ -17,8 +17,9 @@ import { RightArrow } from "../assets/icons/RightArrow"
 import { DownArrow } from "../assets/icons/DownArrow"
 import { LeftArrow } from "../assets/icons/LeftArrow"
 import { UpArrow } from "../assets/icons/UpArrow"
-import { HomeIcon } from "../assets/icons/HomeIcon"
-import { BirthIcon } from "../assets/icons/BirthIcon"
+import { HomeIcons } from "../assets/icons/HomeIcons"
+import { CakeIcon } from "../assets/icons/CakeIcon"
+import { FacebookHasBg } from "../assets/icons/FacebookHasBg"
 import { PersonIcon } from "../assets/icons/PersonIcon"
 import { AIIcon } from "../assets/icons/AIIcon"
 import { ArtIcon } from "../assets/icons/ArtIcon"
@@ -28,6 +29,16 @@ import { GameIcon } from "../assets/icons/GameIcon"
 import { DesignIcon } from "../assets/icons/DesignIcon"
 import { CameraIcon } from "../assets/icons/CameraIcon"
 import { useInView } from "react-intersection-observer"
+import { LogosCss3 } from "../assets/icons/LogosCss3"
+import { LogosDockerIcon } from "../assets/icons/LogosDockerIcon"
+import { LogosHtml5 } from "../assets/icons/LogosHtml5"
+import { LogosJava } from "../assets/icons/LogosJava"
+import { LogosJavascript } from "../assets/icons/LogosJavascript"
+import { LogosMysql } from "../assets/icons/LogosMysql"
+import { LogosReact } from "../assets/icons/LogosReact"
+import { LogosSpringIcon } from "../assets/icons/LogosSpringIcon"
+import { LogosTailwindcssIcon } from "../assets/icons/LogosTailwindcssIcon"
+import { LogosVue } from "../assets/icons/LogosVue"
 import "animate.css"
 import { Link, Outlet } from "react-router-dom"
 function Home() {
@@ -88,9 +99,9 @@ function Home() {
           <UpArrow className="text-black" />
         </button>
       </div>
-      <div className="w-full h-screen bg-gray-100 flex flex-col items-end justify-center ">
-        <div className="navbar absolute top-5 right-12 space-x-10 md:block hidden">
-          <button>Home</button>
+      <div className="w-full h-screen flex flex-col items-end justify-center ">
+        <div className="navbar absolute top-5 md:right-12 space-x-10 md:block text-sm right-5">
+          <button className="underline md:inline-block hidden">Home</button>
           <button onClick={() => scrollToElement(aboutElement)}>
             About me
           </button>
@@ -125,7 +136,10 @@ function Home() {
         </div>
       </div>
       <div className="w-full">
-        <div className="md:max-w-7xl max-w-9xl mx-auto pt-10 p-20" ref={aboutElement}>
+        <div
+          className="md:max-w-7xl max-w-9xl mx-auto pt-10 p-20"
+          ref={aboutElement}
+        >
           <h1 className="text-3xl font-semibold ">About me</h1>
           <div className="text-start md:w-3/5 mt-14">
             <h2 className="text-xl font-semibold py-3">
@@ -140,31 +154,31 @@ function Home() {
             </p>
           </div>
         </div>
-        <div className="gradient text-white py-4 w-full">
+        <div className="bg-black/80 text-white py-4 w-full">
           <div className=" px-20 md:flex md:items-center md:justify-between gap-5  md:max-w-7xl max-w-9xl mx-auto md:flex-row grid grid-cols-1">
             <div className="flex items-center">
               <MaterialSymbolsCallSharp className="inline-block mr-2" />
-              <a href="tel:+66925996241">092-599-6241</a>
+              <a href="tel:+66925996241"  target="_blank">092-599-6241</a>
             </div>
             <div className="flex items-center">
               <SimpleIconsGmail className="inline-block mr-2" />
-              <a href="mailto:chonticha.licha@gmail.com">
+              <a href="mailto:chonticha.licha@gmail.com" target="_blank">
                 chonticha.licha@gmail.com
               </a>
             </div>
             <div className="flex items-center">
               <BiGithub className="inline-block mr-2" />
-              <a href="https://github.com/sealbb">sealbb</a>
+              <a href="https://github.com/sealbb"  target="_blank">sealbb</a>
             </div>
             <div className="flex items-center">
               <JamInstagram className="inline-block mr-2" />
-              <a href="https://www.instagram.com/sealb.b/">sealb.b</a>
+              <a href="https://www.instagram.com/sealb.b/"  target="_blank">sealb.b</a>
             </div>
           </div>
         </div>
         <div className="md:max-w-7xl max-w-9xl mx-auto text-start pt-10 px-20">
           <h1 className="text-xl font-semibold ">Education</h1>
-          <div className="flex md:justify-center justify-start mt-5 text-gray-300">
+          <div className="flex md:justify-center justify-start mt-5 text-black/80">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -178,14 +192,14 @@ function Home() {
             </svg>
           </div>
           <div className="md:grid md:grid-cols-2 w-full">
-            <div className=" border-r-2 text-right px-8"></div>
-            <div className="border-l-2 ml-4 md:ml-0 md:border-l-0 px-8">
+            <div className=" border-r-2 border-black/60 text-right px-8"></div>
+            <div className="border-l-2 ml-4 md:ml-0 md:border-l-0 px-8 ">
               <p>2015-2021</p>
               <p>High School</p>
               <p>Suksanari School</p>
             </div>
           </div>
-          <div className="flex md:justify-center justify-start mt-5 text-gray-300">
+          <div className="flex md:justify-center justify-start mt-5 text-black/80">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -199,7 +213,7 @@ function Home() {
             </svg>
           </div>
           <div className="grid md:grid-cols-2 w-full mt-5">
-            <div className=" md:border-r-2 text-right px-8"></div>
+            <div className=" md:border-r-2 border-black/60 text-right px-8"></div>
             <div className="border-l-2 ml-4 md:ml-0 md:border-l-0 px-8">
               <p>2021-Present</p>
               <p>School of Information Technology (SIT)</p>
@@ -210,26 +224,26 @@ function Home() {
         <div className="md:max-w-7xl max-w-9xl mx-auto text-start pt-10 px-20">
           <div className=" gap-8 my-20">
             <div>
-              <h1 className="text-xl font-semibold text-center py-10 border-t">
+              <h1 className="text-xl font-semibold text-center py-10 border-t border-black/60" >
                 Personal Details
               </h1>
-              <div className="flex justify-between md:flex-row flex-col gap-8 pl-6 md:pl-0 md:gap-0 mt-5 border-b pb-16 border-gray-300">
-                <div className="font-semibold text-gray-600 flex items-center">
-                  <PersonIcon className="inline-block mr-2 text-5xl" />
+              <div className="flex justify-between md:flex-row flex-col gap-8 pl-6 md:pl-0 md:gap-0 mt-5 border-b pb-16 border-black/60">
+                <div className="font-semibold text-black/80 flex items-center">
+                  <PersonIcon className="inline-block md:mr-2 md:text-5xl text-4xl mr-4 " />
                   <div>
                     <p>Chonticha Li</p>
                     <p>Pui</p>
                   </div>
                 </div>
-                <div className="font-semibold text-gray-600 flex items-center">
-                  <HomeIcon className="inline-block mr-2 text-5xl" />
+                <div className="font-semibold text-black/80 flex items-center">
+                  <HomeIcons className="inline-block md:text-4xl text-4xl mr-4" />
                   <div>
                     <p>107 Pracha Uthit Rd. Thung Khru</p>
                     <p>10140</p>
                   </div>
                 </div>
-                <div className="font-semibold text-gray-600 flex items-center">
-                  <BirthIcon className="inline-block mr-2 text-5xl" />
+                <div className="font-semibold text-black/80 flex items-center">
+                  <CakeIcon className="inline-block mr-4 md:mr-2 md:text-5xl text-4xl " />
                   <div>
                     <p>27 November 2002</p>
                     <p>20 years </p>
@@ -241,36 +255,36 @@ function Home() {
               <h1 className="text-xl font-semibold text-center py-10">
                 My interest
               </h1>
-              <div className="flex flex-wrap justify-center gap-5 mt-5 drop-shadow-lg border-b pb-16">
-                <div className="bg-gray-200 rounded-md w-fit p-3 flex flex-col items-center">
+              <div className="flex flex-wrap justify-center gap-5 mt-5 drop-shadow-lg border-b pb-16 border-black/60">
+                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <GameIconsGuitarHead className="inline-block  text-2xl text-gray-800" />
                   <p>Guitar</p>
                 </div>
-                <div className="bg-gray-200 rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <WebIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Web Develop</p>
                 </div>
-                <div className="bg-gray-200 rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <AppIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Mobile Develop</p>
                 </div>
-                <div className="bg-gray-200 rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <AIIcon className="inline-block  text-2xl text-gray-800" />
                   <p>AI</p>
                 </div>
-                <div className="bg-gray-200 rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="bg-white/60 rounded-md w-fit p-3 flex flex-col items-center">
                   <ArtIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Arts</p>
                 </div>
-                <div className="bg-gray-200 rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <CameraIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Film camera</p>
                 </div>
-                <div className="bg-gray-200 rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <GameIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Game Develop</p>
                 </div>
-                <div className="bg-gray-200 rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <DesignIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Design</p>
                 </div>
@@ -290,36 +304,36 @@ function Home() {
                 animate ? "animate__animated animate__fadeIn" : ""
               }`}
             >
-              <div className="bg-gray-200 md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <LogosVisualStudioCode className="inline-block mr-2 text-2xl " />
+              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                <LogosVisualStudioCode className="inline-block md:mr-2 text-2xl " />
                 Visual Studio Code
               </div>
-              <div className="bg-gray-200 md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <DeviconIntellij className="inline-block mr-2 text-2xl " />
+              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                <DeviconIntellij className="inline-block md:mr-2 text-2xl " />
                 IntelliJ IDEA
               </div>
-              <div className="bg-gray-200 md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <SkillIconsMysqlDark className="inline-block mr-2 text-2xl " />
+              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                <SkillIconsMysqlDark className="inline-block md:mr-2 text-2xl " />
                 MySQL Workbench
               </div>
-              <div className="bg-gray-200 md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <DeviconFigma className="inline-block mr-2 text-2xl " />
+              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                <DeviconFigma className="inline-block md:mr-2 text-2xl " />
                 Figma
               </div>
-              <div className="bg-gray-200 md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <LogosPostmanIcon className="inline-block mr-2 text-2xl " />
+              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                <LogosPostmanIcon className="inline-block md:mr-2 text-2xl " />
                 Postman
               </div>
-              <div className="bg-gray-200 md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <DeviconPutty className="inline-block mr-2 text-2xl " />
+              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                <DeviconPutty className="inline-block md:mr-2 text-2xl " />
                 PuTTy
               </div>
-              <div className="bg-gray-200 md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <TeenyiconsGitSolid className="inline-block mr-2 text-2xl text-orange-600" />
+              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                <TeenyiconsGitSolid className="inline-block md:mr-2 text-2xl text-orange-600" />
                 Git
               </div>
-              <div className="bg-gray-200 md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <GameIconsSharkFin className="inline-block mr-2 text-2xl text-blue-800" />
+              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                <GameIconsSharkFin className="inline-block md:mr-2 text-2xl text-blue-800" />
                 Wireshark
               </div>
             </div>
@@ -332,32 +346,45 @@ function Home() {
                 animate ? "animate__animated animate__fadeIn" : ""
               }`}
             >
-              <div className=" px-8 py-4 rounded-lg border border-black/50 shadow-lg">
+              <div className=" md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosVue/>
                 Vue.js
               </div>
-              <div className=" px-8 py-4 rounded-lg border border-black/50 shadow-lg">
+              <div className=" md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+               <LogosReact/>
                 React.js
               </div>
-              <div className=" px-8 py-4 rounded-lg border border-black/50 shadow-lg">
+              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosSpringIcon/>
                 Spring Boot
               </div>
-              <div className=" px-8 py-4 rounded-lg border border-black/50 shadow-lg">
-                SQL
+              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosTailwindcssIcon/>
+                Tailwind CSS
               </div>
-              <div className=" px-8 py-4 rounded-lg border border-black/50 shadow-lg">
+              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosDockerIcon/>
                 Docker
               </div>
-              <div className=" px-8 py-4 rounded-lg border border-black/50 shadow-lg">
+              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosJava className="text-xl"/>
                 Java
               </div>
-              <div className=" px-8 py-4 rounded-lg border border-black/50 shadow-lg">
+              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosJavascript/>
                 JavaScript
               </div>
-              <div className="px-8 py-4 rounded-lg border border-black/50 shadow-lg">
-                HTML CSS
+              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosMysql/>
+                SQL
               </div>
-              <div className=" px-8 py-4 rounded-lg border border-black/50 shadow-lg">
-                Tailwind CSS
+              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosHtml5/>
+                HTML
+              </div>
+              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                <LogosCss3/>
+                CSS
               </div>
             </div>
           </div>
@@ -370,7 +397,7 @@ function Home() {
             <div className={`experience grid md:grid-cols-3 gap-5`}>
               <div
                 ref={ref}
-                className={`space-y-9 border shadow-lg border-black/50 rounded-xl p-8 text-start flex flex-col justify-end ${
+                className={`div-bg space-y-9  shadow-lg border-black/50 rounded-xl p-8 text-start flex flex-col justify-end ${
                   animate ? "animate__animated animate__fadeIn" : ""
                 }`}
               >
@@ -389,7 +416,7 @@ function Home() {
               </div>
               <div
                 ref={ref}
-                className={`flex shadow-lg flex-col justify-end space-y-9 border border-black/50 rounded-xl p-8 text-start ${
+                className={`div-bg flex shadow-lg flex-col justify-end space-y-9  border-black/50 rounded-xl p-8 text-start ${
                   animate ? "animate__animated animate__fadeIn" : ""
                 }`}
               >
@@ -403,13 +430,11 @@ function Home() {
               </div>
               <div
                 ref={ref}
-                className={`flex shadow-lg flex-col justify-end space-y-9 border border-black/50 rounded-xl p-8 text-start ${
+                className={`div-bg flex shadow-lg flex-col justify-end space-y-9  border-black/50 rounded-xl p-8 text-start ${
                   animate ? "animate__animated animate__fadeIn" : ""
                 }`}
               >
-                <h1 className="text-xl font-semibold pt-10">
-                  SAS Announcement
-                </h1>
+                <h1 className="text-xl font-semibold pt-10">SAS project</h1>
                 <p>
                   The User Announcement Management Website allows regular users
                   to read categorized and dated announcements, while
@@ -429,7 +454,7 @@ function Home() {
               </div>
               <div
                 ref={ref}
-                className={`flex shadow-lg flex-col justify-end space-y-9 border border-black/50 rounded-xl p-8 text-start ${
+                className={`div-bg flex shadow-lg flex-col justify-end space-y-9  border-black/50 rounded-xl p-8 text-start ${
                   animate ? "animate__animated animate__fadeIn" : ""
                 }`}
               >
@@ -468,10 +493,10 @@ function Home() {
                 animate ? "animate__animated animate__fadeIn" : ""
               }`}
             >
-              <div className="border border-t-black border-t-2 border-x-0 space-y-16">
+              <div className="border border-t-black border-t-2 border-x-0 space-y-8">
                 <div className="flex justify-between pt-3">
                   <h1 className="text-start text-2xl font-medium">
-                    Hello World Fennec
+                    SIT HelloWorld Fennec
                   </h1>
                   <div className="flex flex-col items-end">
                     <h1 className="text-4xl">29</h1>
@@ -480,38 +505,52 @@ function Home() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex gap-5 justify-end">
-                    <button className="flex items-center gap-2">
-                      <FaceBook /> <p className="text-xs">SIT HELLO WORLD</p>
-                    </button>
-                    <button className="flex items-center gap-2">
-                      <JamInstagram />{" "}
-                      <p className="text-xs">SIT HELLO WORLD</p>
-                    </button>
+                  <div className="flex flex-col gap-2">
+                    <a
+                      href="https://www.facebook.com/groups/1109902006302301/"
+                      target="_blank"
+                    >
+                      <button className=" font-thin rounded-lg   flex items-center gap-2">
+                        <FacebookHasBg className="text-lg" />
+                        SIT HELLO WORLD FENNEC
+                      </button>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/sithelloworld/"
+                      target="_blank"
+                    >
+                      <button className=" font-thin rounded-lg   flex items-center gap-2">
+                        <JamInstagram className="text-lg " />
+                        SIT HELLO WORLD FENNEC
+                      </button>
+                    </a>
                   </div>
                   <img src="/images/DSC_2490.jpg" alt="" />
                 </div>
               </div>
-              <div className="border border-t-black border-t-2 border-x-0 space-y-16">
+              <div className="border border-t-black border-t-2 border-x-0 space-y-16 ">
                 <div className="flex justify-between pt-3">
                   <h1 className="text-start text-2xl font-medium">
-                    Hello World Fennec
+                    IT#29 STARTER PACK
                   </h1>
                   <div className="flex flex-col items-end">
-                    <h1 className="text-4xl">29</h1>
-                    <p>October</p>
-                    <p>2022</p>
+                    <h1 className="text-4xl">17</h1>
+                    <p>July</p>
+                    <p>2023</p>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex gap-5 justify-end">
-                    <button className="flex items-center gap-2">
-                      <FaceBook /> <p className="text-xs">SIT HELLO WORLD</p>
-                    </button>
-                    <button className="flex items-center gap-2">
-                      <JamInstagram />{" "}
-                      <p className="text-xs">SIT HELLO WORLD</p>
-                    </button>
+                  <div className="flex md:flex-row flex-col md:gap-5 gap-2 justify-start">
+                    
+                    <a
+                      href="https://www.instagram.com/sit.it.starterpack/"
+                      target="_blank"
+                    >
+                      <button className=" font-thin rounded-lg   flex items-center gap-2">
+                        <JamInstagram className="text-lg " />
+                        IT29 STARTER PACK
+                      </button>
+                    </a>
                   </div>
                   <img src="/images/D9-Khing-Pan-282.jpg" alt="" />
                 </div>
@@ -519,23 +558,25 @@ function Home() {
               <div className="border border-t-black border-t-2 border-x-0 space-y-16">
                 <div className="flex justify-between pt-3">
                   <h1 className="text-start text-2xl font-medium">
-                    Hello World Fennec
+                    KMUTT STARTUP PLAYGROUND
                   </h1>
                   <div className="flex flex-col items-end">
-                    <h1 className="text-4xl">29</h1>
-                    <p>October</p>
-                    <p>2022</p>
+                    <h1 className="text-4xl">18</h1>
+                    <p>March</p>
+                    <p>2023</p>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex gap-5 justify-end">
-                    <button className="flex items-center gap-2">
-                      <FaceBook /> <p className="text-xs">SIT HELLO WORLD</p>
-                    </button>
-                    <button className="flex items-center gap-2">
-                      <JamInstagram />{" "}
-                      <p className="text-xs">SIT HELLO WORLD</p>
-                    </button>
+                  <div className="flex md:flex-row flex-col md:gap-5 gap-2 justify-start">
+                  <a
+                href="https://www.facebook.com/profile.php?id=100090000707117"
+                target="_blank"
+              >
+                <button className=" font-thin rounded-lg   flex items-center gap-2">
+                  <FacebookHasBg className="text-lg " />
+                  UCAN
+                </button>
+              </a>
                   </div>
                   <img src="/images/st1.jpg" alt="" />
                 </div>

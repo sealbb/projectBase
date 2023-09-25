@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 
 #root {
+  background-color: #fffefa;
+  
+  background-image: url('bg/backg.png');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
   font-family: 'Rubik', sans-serif;
   margin: 0 auto;
   text-align: center;
 }
 
+
+.div-bg {
+  background-color: rgba(255, 255, 255, 0.604);
+  color: #000;
+}
 
 .gradient {
   background: rgb(19, 32, 28);
@@ -69,7 +82,8 @@
   width: 100%;
   height: 200px;
   /* ความสูงเริ่มต้น */
-  background-color: #ccc;
+  /* background-color: #ccc; */
+  background-color: rgba(255, 255, 255, 0.627);
   /* สีพื้นหลังเริ่มต้น */
   overflow: hidden;
   /* ซ่อนส่วนที่เกินความสูง */
@@ -78,11 +92,12 @@
 }
 
 .transition-div:hover {
-  color: #ccc;
+  /* color: #ccc; */
   height: 400px;
   /* ความสูงที่เพิ่มขึ้นเมื่อโฮเวอร์เมาส์ */
-  background: rgb(19, 32, 28);
-  background: radial-gradient(circle, rgba(19, 32, 28, 1) 3%, rgba(26, 42, 39, 1) 24%, rgba(45, 73, 72, 1) 67%, rgba(48, 78, 78, 1) 74%, rgba(50, 81, 81, 1) 83%, rgba(27, 37, 54, 1) 100%, rgba(74, 85, 75, 1) 100%);
+  background-color: #6ed9df96;
+  /* background: rgb(19, 32, 28); */
+  /* background: radial-gradient(circle, rgba(19, 32, 28, 1) 3%, rgba(26, 42, 39, 1) 24%, rgba(45, 73, 72, 1) 67%, rgba(48, 78, 78, 1) 74%, rgba(50, 81, 81, 1) 83%, rgba(27, 37, 54, 1) 100%, rgba(74, 85, 75, 1) 100%); */
 }
 
 .container {

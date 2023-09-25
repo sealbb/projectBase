@@ -9,7 +9,7 @@ function Experience() {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <div className="w-full max-w-7xl mx-auto">
+    <div className="w-full md:max-w-7xl max-w-9xl mx-auto">
       <div className="w-full flex flex-col animate__animated animate__fadeIn">
         <div className="w-full p-12 h-full">
           <div className="navbar  flex items-center justify-between">

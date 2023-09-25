@@ -39,7 +39,7 @@ function Experience() {
                   An online quiz that combines interesting quizzes that can be
                   played in different categories.
                 </p>
-                <a href="https://lnwtrivia.vercel.app/">
+                <a href="https://lnwtrivia.vercel.app/" target="_blank">
                   {" "}
                   <button className="flex items-center border border-black w-fit rounded-2xl px-2 space-x-2">
                     <p>Visit InwTrivia quizz</p>
@@ -73,7 +73,8 @@ function Experience() {
                   An online quiz that combines interesting quizzes that can be
                   played in different categories.
                 </p>
-                <a href="https://lnwtrivia.vercel.app/">
+                <a href="https://intproj22.sit.kmutt.ac.th/kk1/"
+                  target="_blank">
                   {" "}
                   <button className="flex items-center border border-black w-fit rounded-2xl px-2 space-x-2">
                     <p>Visit InwTrivia quizz</p>

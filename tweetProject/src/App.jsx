@@ -13,8 +13,8 @@ class App extends Component {
       <Router>
       
         <Routes>
-                <Route exact path='/' element={< Login />}></Route>
-                <Route exact path='/home' element={< Home />}></Route>
+                <Route exact path='/' element={< Home />}></Route>
+                {/* <Route exact path='/home' element={< Home />}></Route> */}
                 <Route exact path='profile/:id' element={< Profile />}></Route>
         </Routes>
     </Router>

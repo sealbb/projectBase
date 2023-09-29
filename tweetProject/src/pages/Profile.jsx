@@ -8,15 +8,27 @@ import { useParams } from "react-router-dom"
 
 function Profile() {
   const [retweets, setRetweets] = useState([])
-  const { id } = useParams();
-  console.log(id)
+  const [userTweet, setUserTweet] = useState([])
+  const [mode, setMode] = useState("retweet")
+  const { id } = useParams()
 
+  const handleRetweet = async (id) => {
+    setMode("retweet")
+  }
+  const handleTweet = async (id) => {
+    setMode("tweet")
+  }
   useEffect(() => {
     fetch(`http://localhost:8080/api/retweet/${id}`)
       .then((res) => res.json())
       .then((data) => setRetweets(data))
   }, [])
 
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/tweets/${id}`)
+      .then((res) => res.json())
+      .then((data) => setUserTweet(data))
+  }, [])
   return (
     <div className="w-full max-w-4xl mx-auto flex justify-center">
       <div className="flex">
@@ -26,7 +38,7 @@ function Profile() {
           </div>
         </div>
 
-        <div className="p-10 mx-10 flex-grow" id="tweet">
+        <div className="p-10 mx-10 flex-grow w-full" id="tweet">
           <div>
             <div className="pl-2 pb-2">
               <img
@@ -41,15 +53,37 @@ function Profile() {
               <p>@imwinter</p>
             </div>
             <div>
-              <p className="font-bold underline p-1">Posts</p>
+              <button
+                className="font-bold underline p-1"
+                onClick={handleRetweet}
+              >
+                Your Retweet
+              </button>
+              <button className="font-bold underline p-1" onClick={handleTweet}>
+                Your Tweet
+              </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center">
-            {retweets.map((tweet) => (
-              <Retweet key={tweet.tweetId} tweetData={tweet} />
-            ))}
+          <div>
+            {mode === "retweet" && (
+              <div className="flex flex-col justify-center">
+                {retweets.map((tweet) => (
+                  <Retweet key={tweet.tweetId} tweetData={tweet} />
+                ))}
+              </div>
+            )}
+          </div>
+          <div>
+            {mode === "tweet" && (
+              <div className="flex flex-col justify-center">
+                {userTweet.map((tweet) => (
+                  <Tweet key={tweet.tweetId} tweetData={tweet} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
+
         <div className="sticky right-0 h-screen transition-transform w-28">
           <div className="h-full px-3 py-4 overflow-y-auto">
             <Rightbar />

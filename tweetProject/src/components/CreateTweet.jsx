@@ -1,19 +1,23 @@
 import React from "react"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { MaterialSymbolsClose } from "../assets/icons/close.jsx"
-function CreateTweet({sendData}) {
+
+function CreateTweet({ sendData, sendDataToParent, onClose }) {
   const contentText = useRef(null)
   const [content, setContent] = useState({})
+
   const setData = async () => {
     await setContent({ content: contentText.current.value, userId: 1 })
     await sendData({ content: contentText.current.value, userId: 1 })
     contentText.current.value = ""
   }
-  console.log("data in box"+content)
+  useEffect(() => {
+    contentText.current.focus()
+  }, [])
   return (
     <div className="h-screen w-screen bg-black/30 flex justify-center">
       <div className="bg-white rounded-xl flex gap-5 p-5 w-2/4 h-1/4 mt-20 ">
-        <MaterialSymbolsClose />
+        <MaterialSymbolsClose onClick={() => onClose()} /> {/* Call onClose here */}
         <div className="flex flex-col space-y-5 p-5">
           <label htmlFor="input" className="text-sm font-medium text-gray-700">
             Tell us what happened

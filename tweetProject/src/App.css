@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .bg-tweet {
-  background-image: url('../public/tweetBg.png');
+  /* background-image: url('../public/tweetBg.png');
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .no-outline {

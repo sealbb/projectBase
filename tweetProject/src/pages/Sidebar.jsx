@@ -2,11 +2,8 @@ import React from "react"
 import { useState, useEffect } from "react"
 import { Link, Outlet } from "react-router-dom"
 
-function Sidebar({sendDataToParent}) {
-  const [dataToSend, setDataToSend] = useState();
-  const handleCreate = () => {
-    sendDataToParent(true)
-  }
+function Sidebar() {
+
   return (
     <>
    
@@ -19,23 +16,23 @@ function Sidebar({sendDataToParent}) {
               className="w-10 h-10"
             />
           </div>
-          <Link to="/Home">
+          <Link to="/">
           <div className="hover:bg-slate-100 px-3 py-2 w-full rounded-lg">
             <h1>Home</h1>
           </div>
           </Link>
-          <div className="hover:bg-slate-100 px-3 py-2 w-full rounded-lg">
+          {/* <div className="hover:bg-slate-100 px-3 py-2 w-full rounded-lg">
             <h1>Explore</h1>
-          </div>
+          </div> */}
           <div className="hover:bg-slate-100 px-3 py-2 w-full rounded-lg">
             <h1>Notifications</h1>
           </div>
           <div className="hover:bg-slate-100 px-3 py-2 w-full rounded-lg">
             <h1>Messages</h1>
           </div>
-          <div className="hover:bg-slate-100 px-3 py-2 w-full rounded-lg">
+          {/* <div className="hover:bg-slate-100 px-3 py-2 w-full rounded-lg">
             <h1>Profile</h1>
-          </div>
+          </div> */}
           {/* <div>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Tweet
@@ -45,13 +42,10 @@ function Sidebar({sendDataToParent}) {
           <h1>Login/Sign in</h1>
         </div> */}
           <Link to={`/profile/${1}`}>
-            <div>
-              <img src="../a.jpg" alt="" className="rounded-full h-10 w-10" />
+            <div className="flex items-center justify-center px-3">
+              <img src="/public/user1.webp" alt="" className="rounded-full h-10 w-10" />
             </div>
           </Link>
-          <div onClick={handleCreate}>
-            Add Tweet
-          </div>
         </div>
       </div>
     </>

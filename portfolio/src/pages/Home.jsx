@@ -158,7 +158,9 @@ function Home() {
           <div className=" px-20 md:flex md:items-center md:justify-between gap-5  md:max-w-7xl max-w-9xl mx-auto md:flex-row grid grid-cols-1">
             <div className="flex items-center">
               <MaterialSymbolsCallSharp className="inline-block mr-2" />
-              <a href="tel:+66925996241"  target="_blank">092-599-6241</a>
+              <a href="tel:+66925996241" target="_blank">
+                092-599-6241
+              </a>
             </div>
             <div className="flex items-center">
               <SimpleIconsGmail className="inline-block mr-2" />
@@ -168,11 +170,15 @@ function Home() {
             </div>
             <div className="flex items-center">
               <BiGithub className="inline-block mr-2" />
-              <a href="https://github.com/sealbb"  target="_blank">sealbb</a>
+              <a href="https://github.com/sealbb" target="_blank">
+                sealbb
+              </a>
             </div>
             <div className="flex items-center">
               <JamInstagram className="inline-block mr-2" />
-              <a href="https://www.instagram.com/sealb.b/"  target="_blank">sealb.b</a>
+              <a href="https://www.instagram.com/sealb.b/" target="_blank">
+                sealb.b
+              </a>
             </div>
           </div>
         </div>
@@ -194,9 +200,10 @@ function Home() {
           <div className="md:grid md:grid-cols-2 w-full">
             <div className=" border-r-2 border-black/60 text-right px-8"></div>
             <div className="border-l-2 ml-4 md:ml-0 md:border-l-0 px-8 ">
-              <p>2015-2021</p>
+              <p>2018-2020</p>
               <p>High School</p>
-              <p>Suksanari School</p>
+              <p className="font-semibold">Suksanari School</p>
+              <p>GPAX 3.84</p>
             </div>
           </div>
           <div className="flex md:justify-center justify-start mt-5 text-black/80">
@@ -216,15 +223,18 @@ function Home() {
             <div className=" md:border-r-2 border-black/60 text-right px-8"></div>
             <div className="border-l-2 ml-4 md:ml-0 md:border-l-0 px-8">
               <p>2021-Present</p>
-              <p>School of Information Technology (SIT)</p>
+              <p className="font-semibold">
+                School of Information Technology (SIT)
+              </p>
               <p>King Mongkut's University of Technology Thonburi</p>
+              <p>GPAX 3.71</p>
             </div>
           </div>
         </div>
         <div className="md:max-w-7xl max-w-9xl mx-auto text-start pt-10 px-20">
           <div className=" gap-8 my-20">
             <div>
-              <h1 className="text-xl font-semibold text-center py-10 border-t border-black/60" >
+              <h1 className="text-xl font-semibold text-center py-10 border-t border-black/60">
                 Personal Details
               </h1>
               <div className="flex justify-between md:flex-row flex-col gap-8 pl-6 md:pl-0 md:gap-0 mt-5 border-b pb-16 border-black/60">
@@ -232,7 +242,7 @@ function Home() {
                   <PersonIcon className="inline-block md:mr-2 md:text-5xl text-4xl mr-4 " />
                   <div>
                     <p>Chonticha Li</p>
-                    <p>Pui</p>
+                    <p>(Pui)</p>
                   </div>
                 </div>
                 <div className="font-semibold text-black/80 flex items-center">
@@ -262,15 +272,15 @@ function Home() {
                 </div>
                 <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <WebIcon className="inline-block  text-2xl text-gray-800" />
-                  <p>Web Develop</p>
+                  <p>Web development</p>
                 </div>
                 <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <AppIcon className="inline-block  text-2xl text-gray-800" />
-                  <p>Mobile Develop</p>
+                  <p>Mobile development</p>
                 </div>
                 <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <AIIcon className="inline-block  text-2xl text-gray-800" />
-                  <p>AI</p>
+                  <p>AI </p>
                 </div>
                 <div className="bg-white/60 rounded-md w-fit p-3 flex flex-col items-center">
                   <ArtIcon className="inline-block  text-2xl text-gray-800" />
@@ -282,7 +292,7 @@ function Home() {
                 </div>
                 <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <GameIcon className="inline-block  text-2xl text-gray-800" />
-                  <p>Game Develop</p>
+                  <p>Game development</p>
                 </div>
                 <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <DesignIcon className="inline-block  text-2xl text-gray-800" />
@@ -347,43 +357,43 @@ function Home() {
               }`}
             >
               <div className=" md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosVue/>
+                <LogosVue />
                 Vue.js
               </div>
               <div className=" md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-               <LogosReact/>
+                <LogosReact />
                 React.js
               </div>
               <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosSpringIcon/>
+                <LogosSpringIcon />
                 Spring Boot
               </div>
               <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosTailwindcssIcon/>
+                <LogosTailwindcssIcon />
                 Tailwind CSS
               </div>
               <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosDockerIcon/>
+                <LogosDockerIcon />
                 Docker
               </div>
               <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosJava className="text-xl"/>
+                <LogosJava className="text-xl" />
                 Java
               </div>
               <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosJavascript/>
+                <LogosJavascript />
                 JavaScript
               </div>
               <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosMysql/>
+                <LogosMysql />
                 SQL
               </div>
               <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosHtml5/>
+                <LogosHtml5 />
                 HTML
               </div>
               <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosCss3/>
+                <LogosCss3 />
                 CSS
               </div>
             </div>
@@ -406,13 +416,26 @@ function Home() {
                   An online quiz that combines interesting quizzes that can
                   played in different categories.
                 </p>
-                <a href="https://lnwtrivia.vercel.app/" target="_blank">
+                <div>
+                  <a href="https://lnwtrivia.vercel.app/" target="_blank">
                   <button className="flex items-center group relative">
                     <p className=" relative z-10">visit website</p>
                     <span className="absolute w-full h-[1px] bg-black/70 bottom-0 left-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
                     <RightArrow className="inline-block ml-2" />
                   </button>
                 </a>
+                  <a
+                    href="https://github.com/Lostjerome/PROJECT1-SEC-1-KBPJJ"
+                    target="_blank"
+                  >
+                    <button className="flex items-center group relative">
+                      <p className=" relative z-10">github repository</p>
+                      <span className="absolute w-full h-[1px] bg-black/70 bottom-0 left-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                      <RightArrow className="inline-block ml-2" />
+                    </button>
+                  </a>
+                </div>
+                
               </div>
               <div
                 ref={ref}
@@ -426,7 +449,18 @@ function Home() {
                   or search using keywords. Additionally, you can create your
                   own blog.
                 </p>
-                <div></div>
+                <div>
+                  <a
+                    href="https://github.com/Lostjerome/PROJECT2-SEC-1-BLOGTOPIA"
+                    target="_blank"
+                  >
+                    <button className="flex items-center group relative">
+                      <p className=" relative z-10">github repository</p>
+                      <span className="absolute w-full h-[1px] bg-black/70 bottom-0 left-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                      <RightArrow className="inline-block ml-2" />
+                    </button>
+                  </a>
+                </div>
               </div>
               <div
                 ref={ref}
@@ -441,16 +475,18 @@ function Home() {
                   administrators can create, edit, and manage announcements for
                   effective communication.
                 </p>
-                <a
-                  href="https://intproj22.sit.kmutt.ac.th/kk1/"
-                  target="_blank"
-                >
-                  <button className="flex items-center group relative">
-                    <p className=" relative z-10">visit website</p>
-                    <span className="absolute w-full h-[1px] bg-black/70 bottom-0 left-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    <RightArrow className="inline-block ml-2" />
-                  </button>
-                </a>
+                <div>
+                  <a
+                    href="https://intproj22.sit.kmutt.ac.th/kk1/"
+                    target="_blank"
+                  >
+                    <button className="flex items-center group relative">
+                      <p className=" relative z-10">visit website</p>
+                      <span className="absolute w-full h-[1px] bg-black/70 bottom-0 left-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                      <RightArrow className="inline-block ml-2" />
+                    </button>
+                  </a>
+                </div>
               </div>
               <div
                 ref={ref}
@@ -541,7 +577,6 @@ function Home() {
                 </div>
                 <div className="space-y-2">
                   <div className="flex md:flex-row flex-col md:gap-5 gap-2 justify-start">
-                    
                     <a
                       href="https://www.instagram.com/sit.it.starterpack/"
                       target="_blank"
@@ -568,15 +603,15 @@ function Home() {
                 </div>
                 <div className="space-y-2">
                   <div className="flex md:flex-row flex-col md:gap-5 gap-2 justify-start">
-                  <a
-                href="https://www.facebook.com/profile.php?id=100090000707117"
-                target="_blank"
-              >
-                <button className=" font-thin rounded-lg   flex items-center gap-2">
-                  <FacebookHasBg className="text-lg " />
-                  UCAN
-                </button>
-              </a>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100090000707117"
+                      target="_blank"
+                    >
+                      <button className=" font-thin rounded-lg   flex items-center gap-2">
+                        <FacebookHasBg className="text-lg " />
+                        UCAN
+                      </button>
+                    </a>
                   </div>
                   <img src="/images/st1.jpg" alt="" />
                 </div>

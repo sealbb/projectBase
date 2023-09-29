@@ -55,11 +55,19 @@ function Experience() {
                   This quiz fetch the
                   questions from an API based on Vue.js and Tailwind CSS.
                 </p>
+                <a href="https://github.com/Lostjerome/PROJECT1-SEC-1-KBPJJ" target="_blank">
+                  {" "}
+                  <button className="flex items-center border  mt-3 border-black w-fit rounded-2xl px-2 space-x-2 hover:bg-black hover:text-white duration-500">
+                    <p className="md:block hidden">Github repository</p>
+                    <p className="md:hidden block">Repository</p>
+                    <RightArrow className="text-xs" />
+                  </button>
+                </a>
                 <a href="https://lnwtrivia.vercel.app/" target="_blank">
                   {" "}
                   <button className="flex items-center border  mt-3 border-black w-fit rounded-2xl px-2 space-x-2 hover:bg-black hover:text-white duration-500">
                     <p className="md:block hidden">Visit InwTrivia quizz</p>
-                    <p className="md:hidden block">Visit</p>
+                    <p className="md:hidden block">Website</p>
                     <RightArrow className="text-xs" />
                   </button>
                 </a>
@@ -85,6 +93,14 @@ function Experience() {
                 A blogging website.Uses vue.js and JSON server.Do CRUD and fetch
                   data from backend.
                 </p>
+                <a href="https://github.com/Lostjerome/PROJECT2-SEC-1-BLOGTOPIA" target="_blank">
+                  {" "}
+                  <button className="flex items-center border  mt-3 border-black w-fit rounded-2xl px-2 space-x-2 hover:bg-black hover:text-white duration-500">
+                    <p className="md:block hidden">Github repository</p>
+                    <p className="md:hidden block">Repository</p>
+                    <RightArrow className="text-xs" />
+                  </button>
+                </a>
                 <div className="mt-5 flex">
                   <LogosVue className="inline-block mr-2 text-2xl " />
                   <LogosTailwindcssIcon className="inline-block mr-2 text-2xl " />
@@ -117,7 +133,7 @@ function Experience() {
                   {" "}
                   <button className="flex items-center border  mt-3 border-black w-fit rounded-2xl px-2 space-x-2 hover:bg-black hover:text-white duration-500">
                     <p className="md:block hidden">Visit SAS project</p>
-                    <p className="md:hidden block">Visit</p>
+                    <p className="md:hidden block">Website</p>
                     <RightArrow className="text-xs" />
                   </button>
                 </a>

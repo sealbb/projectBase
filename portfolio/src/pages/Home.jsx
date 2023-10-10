@@ -3,7 +3,6 @@ import { BiGithub } from "../assets/icons/GithubIcon"
 import { MaterialSymbolsCallSharp } from "../assets/icons/CallIcon"
 import { SimpleIconsGmail } from "../assets/icons/GmailIcon"
 import { JamInstagram } from "../assets/icons/InstagramIcon"
-import { FaceBook } from "../assets/icons/FaceBook"
 import { LogosVisualStudioCode } from "../assets/icons/LogosVisualStudioCode"
 import { DeviconIntellij } from "../assets/icons/DeviconIntellij"
 import { SkillIconsMysqlDark } from "../assets/icons/SkillIconsMysqlDark"
@@ -15,7 +14,6 @@ import { GameIconsSharkFin } from "../assets/icons/GameIconsSharkFin"
 import { GameIconsGuitarHead } from "../assets/icons/GameIconsGuitarHead"
 import { RightArrow } from "../assets/icons/RightArrow"
 import { DownArrow } from "../assets/icons/DownArrow"
-import { LeftArrow } from "../assets/icons/LeftArrow"
 import { UpArrow } from "../assets/icons/UpArrow"
 import { HomeIcons } from "../assets/icons/HomeIcons"
 import { CakeIcon } from "../assets/icons/CakeIcon"
@@ -40,7 +38,7 @@ import { LogosSpringIcon } from "../assets/icons/LogosSpringIcon"
 import { LogosTailwindcssIcon } from "../assets/icons/LogosTailwindcssIcon"
 import { LogosVue } from "../assets/icons/LogosVue"
 import "animate.css"
-import { Link, Outlet } from "react-router-dom"
+import { Link } from "react-router-dom"
 function Home() {
   const toolsElment = useRef(null)
   const aboutElement = useRef(null)
@@ -49,8 +47,8 @@ function Home() {
   const [isVisible, setIsVisible] = useState(false)
   const [animate, setAnimate] = useState(false)
   const [ref, inView] = useInView({
-    triggerOnce: true, // Only trigger once when the element comes into view
-    threshold: 0.1, // Percentage of the element's visibility needed to trigger
+    triggerOnce: true,
+    threshold: 0.1,
   })
   if (inView && !animate) {
     setAnimate(true)
@@ -59,7 +57,7 @@ function Home() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling animation
+      behavior: "smooth",
     })
   }
 
@@ -74,15 +72,32 @@ function Home() {
   const scrollToElement = (elementRef) => {
     if (elementRef && elementRef.current) {
       elementRef.current.scrollIntoView({
-        behavior: "smooth", // Add smooth scrolling animation
-        block: "start", // Scroll to the top of the element
+        behavior: "smooth",
+        block: "start",
       })
     }
   }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show")
+      } else {
+        entry.target.classList.remove("show")
+      }
+    })
+  })
+  
+  const hiddeElement = document.querySelectorAll(".hiddens")
+  
+  hiddeElement.forEach((element) => {
+    observer.observe(element)
+  })
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
 
-    // Clean up the event listener when the component unmounts
+   
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
@@ -261,40 +276,40 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="hiddens">
               <h1 className="text-xl font-semibold text-center py-10">
                 My interest
               </h1>
-              <div className="flex flex-wrap justify-center gap-5 mt-5 drop-shadow-lg border-b pb-16 border-black/60">
-                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
+              <div className="inters flex flex-wrap justify-center gap-5 mt-5 drop-shadow-lg border-b pb-16 border-black/60">
+                <div className="inter  hiddens div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <GameIconsGuitarHead className="inline-block  text-2xl text-gray-800" />
                   <p>Guitar</p>
                 </div>
-                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="inter hiddens div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <WebIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Web development</p>
                 </div>
-                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="inter hiddens div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <AppIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Mobile development</p>
                 </div>
-                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="inter hiddens div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <AIIcon className="inline-block  text-2xl text-gray-800" />
                   <p>AI </p>
                 </div>
-                <div className="bg-white/60 rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="inter hiddens div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <ArtIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Arts</p>
                 </div>
-                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="inter hiddens div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <CameraIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Film camera</p>
                 </div>
-                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="inter hiddens div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <GameIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Game development</p>
                 </div>
-                <div className="div-bg rounded-md w-fit p-3 flex flex-col items-center">
+                <div className="inter hiddens div-bg rounded-md w-fit p-3 flex flex-col items-center">
                   <DesignIcon className="inline-block  text-2xl text-gray-800" />
                   <p>Design</p>
                 </div>

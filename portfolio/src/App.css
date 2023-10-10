@@ -76,6 +76,14 @@
   transition-delay: 1400ms ;
 }
 
+.inter:nth-child(9){
+  transition-delay: 1400ms ;
+}
+
+.inter:nth-child(10){
+  transition-delay: 1400ms ;
+}
+
 .scroll-to-top {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -132,6 +140,9 @@
 .transition-div:hover {
   height: 400px;
   background-color: #6ed9df96;
+  /* background: rgb(72,239,155);
+  background: linear-gradient(0deg, rgba(72,239,155,1) 0%, rgba(118,212,237,0.3) 100%); */
+
 }
 
 .container {

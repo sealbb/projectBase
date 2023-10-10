@@ -87,17 +87,15 @@ function Home() {
       }
     })
   })
-  
-  const hiddeElement = document.querySelectorAll(".hiddens")
-  
-  hiddeElement.forEach((element) => {
+
+  const hiddenElements = document.querySelectorAll(".hiddens")
+
+  hiddenElements.forEach((element) => {
     observer.observe(element)
   })
-  
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
-
-   
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
@@ -152,7 +150,7 @@ function Home() {
       </div>
       <div className="w-full">
         <div
-          className="md:max-w-7xl max-w-9xl mx-auto pt-10 p-20"
+          className="hiddens md:max-w-7xl max-w-9xl mx-auto pt-10 p-20"
           ref={aboutElement}
         >
           <h1 className="text-3xl font-semibold ">About me</h1>
@@ -322,94 +320,98 @@ function Home() {
       <div className="w-full max-w-7xl mx-auto">
         <div>
           <div ref={toolsElment} className="pt-10 p-20">
-            <h1 className="text-3xl font-semibold">TOOLS</h1>
-            <div
-              ref={ref}
-              className={`fade-in-element tools grid md:grid-cols-4 gap-5 mt-10 grid-cols-2 ${
-                animate ? "animate__animated animate__fadeIn" : ""
-              }`}
-            >
-              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <LogosVisualStudioCode className="inline-block md:mr-2 text-2xl " />
-                Visual Studio Code
-              </div>
-              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <DeviconIntellij className="inline-block md:mr-2 text-2xl " />
-                IntelliJ IDEA
-              </div>
-              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <SkillIconsMysqlDark className="inline-block md:mr-2 text-2xl " />
-                MySQL Workbench
-              </div>
-              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <DeviconFigma className="inline-block md:mr-2 text-2xl " />
-                Figma
-              </div>
-              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <LogosPostmanIcon className="inline-block md:mr-2 text-2xl " />
-                Postman
-              </div>
-              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <DeviconPutty className="inline-block md:mr-2 text-2xl " />
-                PuTTy
-              </div>
-              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <TeenyiconsGitSolid className="inline-block md:mr-2 text-2xl text-orange-600" />
-                Git
-              </div>
-              <div className="div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
-                <GameIconsSharkFin className="inline-block md:mr-2 text-2xl text-blue-800" />
-                Wireshark
+            <div className="hiddens">
+              <h1 className="text-3xl font-semibold">TOOLS</h1>
+              <div
+                ref={ref}
+                className={`fade-in-element tools grid md:grid-cols-4 gap-5 mt-10 grid-cols-2 ${
+                  animate ? "animate__animated animate__fadeIn" : ""
+                }`}
+              >
+                <div className="inter hiddens div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                  <LogosVisualStudioCode className="inline-block md:mr-2 text-2xl " />
+                  Visual Studio Code
+                </div>
+                <div className="inter hiddens div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                  <DeviconIntellij className="inline-block md:mr-2 text-2xl " />
+                  IntelliJ IDEA
+                </div>
+                <div className="inter hiddens div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                  <SkillIconsMysqlDark className="inline-block md:mr-2 text-2xl " />
+                  MySQL Workbench
+                </div>
+                <div className="inter hiddens div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                  <DeviconFigma className="inline-block md:mr-2 text-2xl " />
+                  Figma
+                </div>
+                <div className="inter hiddens div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                  <LogosPostmanIcon className="inline-block md:mr-2 text-2xl " />
+                  Postman
+                </div>
+                <div className="inter hiddens div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                  <DeviconPutty className="inline-block md:mr-2 text-2xl " />
+                  PuTTy
+                </div>
+                <div className="inter hiddens div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                  <TeenyiconsGitSolid className="inline-block md:mr-2 text-2xl text-orange-600" />
+                  Git
+                </div>
+                <div className="inter hiddens div-bg md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row">
+                  <GameIconsSharkFin className="inline-block md:mr-2 text-2xl text-blue-800" />
+                  Wireshark
+                </div>
               </div>
             </div>
-            <h1 className="text-3xl font-semibold my-10 mt-16 uppercase">
-              Technical Skills
-            </h1>
-            <div
-              ref={ref}
-              className={`fade-in-element tools grid md:grid-cols-4 gap-5 mt-10 grid-cols-2  ${
-                animate ? "animate__animated animate__fadeIn" : ""
-              }`}
-            >
-              <div className=" md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosVue />
-                Vue.js
-              </div>
-              <div className=" md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosReact />
-                React.js
-              </div>
-              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosSpringIcon />
-                Spring Boot
-              </div>
-              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosTailwindcssIcon />
-                Tailwind CSS
-              </div>
-              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosDockerIcon />
-                Docker
-              </div>
-              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosJava className="text-xl" />
-                Java
-              </div>
-              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosJavascript />
-                JavaScript
-              </div>
-              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosMysql />
-                SQL
-              </div>
-              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosHtml5 />
-                HTML
-              </div>
-              <div className="md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
-                <LogosCss3 />
-                CSS
+            <div className="hiddens">
+              <h1 className="text-3xl font-semibold my-10 mt-16 uppercase">
+                Technical Skills
+              </h1>
+              <div
+                ref={ref}
+                className={` fade-in-element tools grid md:grid-cols-4 gap-5 mt-10 grid-cols-2  ${
+                  animate ? "animate__animated animate__fadeIn" : ""
+                }`}
+              >
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosVue />
+                  Vue.js
+                </div>
+                <div className=" inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosReact />
+                  React.js
+                </div>
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosSpringIcon />
+                  Spring Boot
+                </div>
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosTailwindcssIcon />
+                  Tailwind CSS
+                </div>
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosDockerIcon />
+                  Docker
+                </div>
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosJava className="text-xl" />
+                  Java
+                </div>
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosJavascript />
+                  JavaScript
+                </div>
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosMysql />
+                  SQL
+                </div>
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosHtml5 />
+                  HTML
+                </div>
+                <div className="inter hiddens md:px-8 px-5 py-4 rounded-lg flex justify-center items-center shadow-lg flex-col md:flex-row border border-black/50 gap-2">
+                  <LogosCss3 />
+                  CSS
+                </div>
               </div>
             </div>
           </div>
@@ -433,12 +435,12 @@ function Home() {
                 </p>
                 <div>
                   <a href="https://lnwtrivia.vercel.app/" target="_blank">
-                  <button className="flex items-center group relative">
-                    <p className=" relative z-10">visit website</p>
-                    <span className="absolute w-full h-[1px] bg-black/70 bottom-0 left-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-                    <RightArrow className="inline-block ml-2" />
-                  </button>
-                </a>
+                    <button className="flex items-center group relative">
+                      <p className=" relative z-10">visit website</p>
+                      <span className="absolute w-full h-[1px] bg-black/70 bottom-0 left-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+                      <RightArrow className="inline-block ml-2" />
+                    </button>
+                  </a>
                   <a
                     href="https://github.com/Lostjerome/PROJECT1-SEC-1-KBPJJ"
                     target="_blank"
@@ -450,7 +452,6 @@ function Home() {
                     </button>
                   </a>
                 </div>
-                
               </div>
               <div
                 ref={ref}
